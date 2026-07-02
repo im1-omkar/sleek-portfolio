@@ -12,6 +12,7 @@ const About = () => {
           <div className="flex flex-wrap gap-2">
             <Badge variant="secondary">TypeScript</Badge>
             <Badge variant="secondary">JavaScript</Badge>
+            <Badge variant="secondary">C++</Badge>
             <Badge variant="secondary">SQL</Badge>
             <Badge variant="secondary">React</Badge>
             <Badge variant="secondary">Next.js</Badge>

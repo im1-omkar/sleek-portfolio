@@ -1,56 +1,90 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
+import {
+  Brain,
+  Atom,
+  Network,
+  Globe,
+  Dumbbell,
+  Cpu,
+  Code2,
+  Server,
+  Sparkles
+} from "lucide-react";
 
 const About = () => {
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-8">
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="space-y-4">
-          <h3 className="text-sm font-medium uppercase tracking-wider text-foreground">Languages & Frontend</h3>
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary">TypeScript</Badge>
-            <Badge variant="secondary">JavaScript</Badge>
-            <Badge variant="secondary">C++</Badge>
-            <Badge variant="secondary">SQL</Badge>
-            <Badge variant="secondary">React</Badge>
-            <Badge variant="secondary">Next.js</Badge>
-            <Badge variant="secondary">Tailwind CSS</Badge>
-            <Badge variant="secondary">shadcn/ui</Badge>
-            <Badge variant="secondary">Framer Motion</Badge>
+      {/* Bento Box Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        {/* Frontend Bento Box */}
+        <div className="flex flex-col gap-4 border border-white/10 bg-white/[0.02] p-6 rounded-2xl transition-colors hover:bg-white/[0.04]">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
+            <Code2 className="w-4 h-4 text-blue-400/70" />
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground/80">Languages & Frontend</h3>
+          </div>
+          <div className="flex flex-wrap gap-2.5">
+            {["TypeScript", "JavaScript", "C++", "SQL", "React", "Next.js", "Tailwind CSS", "shadcn/ui", "Framer Motion"].map((skill) => (
+              <Badge key={skill} className="bg-white/5 border-white/10 text-muted-foreground hover:bg-white/10 hover:text-foreground transition-all cursor-default" variant="outline">
+                {skill}
+              </Badge>
+            ))}
           </div>
         </div>
 
-        <div className="space-y-4">
-          <h3 className="text-sm font-medium uppercase tracking-wider text-foreground">Backend & Tools</h3>
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary">Node.js</Badge>
-            <Badge variant="secondary">Express</Badge>
-            <Badge variant="secondary">PostgreSQL</Badge>
-            <Badge variant="secondary">Prisma</Badge>
-            <Badge variant="secondary">REST APIs</Badge>
-            <Badge variant="secondary">WebSockets</Badge>
-            <Badge variant="secondary">Git & GitHub</Badge>
-            <Badge variant="secondary">Docker</Badge>
-            <Badge variant="secondary">Linux</Badge>
-            <Badge variant="secondary">Vercel</Badge>
+        {/* Backend Bento Box */}
+        <div className="flex flex-col gap-4 border border-white/10 bg-white/[0.02] p-6 rounded-2xl transition-colors hover:bg-white/[0.04]">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
+            <Server className="w-4 h-4 text-green-400/70" />
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground/80">Backend & Tools</h3>
+          </div>
+          <div className="flex flex-wrap gap-2.5">
+            {["Node.js", "Express", "PostgreSQL", "Prisma", "REST APIs", "WebSockets", "Git & GitHub", "Docker", "Linux", "Vercel"].map((tool) => (
+              <Badge key={tool} className="bg-white/5 border-white/10 text-muted-foreground hover:bg-white/10 hover:text-foreground transition-all cursor-default" variant="outline">
+                {tool}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Interests */}
-      <div className="space-y-4">
-        <h3 className="text-sm font-medium uppercase tracking-wider text-foreground">Interests</h3>
-        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">🧠 Artificial Intelligence</span>
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">🌌 Physics & Cosmology</span>
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">💻 Distributed Systems</span>
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">🌍 Geopolitics</span>
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">🏋️ Gym & Fitness</span>
-          <span className="flex items-center gap-1.5 bg-muted/50 px-3 py-1.5 rounded-md">🎯 Building products</span>
+      {/* Interests Bento Box */}
+      <div className="flex flex-col gap-4 border border-white/10 bg-white/[0.02] p-6 rounded-2xl transition-colors hover:bg-white/[0.04]">
+        <div className="flex items-center gap-2 text-muted-foreground mb-2">
+          <Sparkles className="w-4 h-4 text-purple-400/70" />
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground/80">Interests</h3>
+        </div>
+
+        <div className="flex flex-wrap gap-3 text-sm text-foreground/80">
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Brain className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all" />
+            Artificial Intelligence
+          </span>
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Atom className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:rotate-180 transition-all duration-500" />
+            Physics & Cosmology
+          </span>
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Network className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all" />
+            Distributed Systems
+          </span>
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Globe className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:rotate-12 transition-all" />
+            Geopolitics
+          </span>
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Dumbbell className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:-rotate-12 transition-all" />
+            Gym & Fitness
+          </span>
+          <span className="group flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 hover:border-primary/40 transition-all cursor-default">
+            <Cpu className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all" />
+            Building Products
+          </span>
         </div>
       </div>
+
     </section>
   );
 }

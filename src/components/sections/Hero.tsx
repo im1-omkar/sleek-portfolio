@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { ArrowRight, Circle } from "lucide-react";
-import { Badge } from '@/components/ui/badge';
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="animate-in fade-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center text-center gap-8">
+    <section className="mt-12 mb-25 animate-in fade-in slide-in-from-bottom-4 duration-1000 flex flex-col items-center text-center gap-8">
 
       {/* Live Status Indicator */}
       <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-muted-foreground backdrop-blur-sm">
@@ -65,34 +64,20 @@ const Hero = () => {
 
         {/* Minimalist Tagline */}
         <p className="text-muted-foreground text-base sm:text-lg">
-          CS@IIITN | Full-Stack & Applied AI Developer
+          21,
+
+          CS@IIITN. I break things. First principles & my curiosity.
+
+          History, psychology, geopolitics, theoretical physics, AI and few good books.
+          <br/>
+          Trying to build a things & explanations that lasts.
+          <br/>
+          If you're creating something meaningful, I'm listening.
+
         </p>
 
       </div>
-
-      {/* Minimalist Action Links */}
-      <div className="flex justify-center gap-8 text-sm font-medium">
-        <a
-          href="#projects"
-          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors group"
-        >
-          View Projects
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </a>
-        <a
-          href="https://github.com/im1-omkar"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
-        >
-          <img
-            src="/github.png"
-            alt="GitHub Logo"
-            className="w-4 h-4 group-hover:scale-110 transition-transform opacity-70 group-hover:opacity-100"
-          />
-          GitHub
-        </a>
-      </div>
+     
     </section>
   );
 }

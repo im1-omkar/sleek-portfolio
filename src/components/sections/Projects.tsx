@@ -7,38 +7,49 @@ import { Code2, PlayCircle } from "lucide-react";
 const Projects = () => {
   return (
     <section id="projects" className="flex flex-col gap-10">
-      <h2 className="text-2xl font-bold tracking-tight text-foreground">💼 Projects</h2>
+      <h2 className="text-3xl font-bold tracking-tight text-foreground flex justify-center">Proof of Work :)</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* DevFlow Project Card */}
         <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
-          <div className="aspect-video bg-muted/30 relative flex items-center justify-center border-b border-border/50 group-hover:bg-muted/50 transition-colors">
-            <span className="text-muted-foreground text-sm flex items-center gap-2">
-              <PlayCircle className="w-5 h-5 opacity-70" /> DevFlow_Demo.mp4
-            </span>
+          <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
+            <video
+              className="w-full h-full object-cover"
+              src="/videos/metaverse1.webm"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
           </div>
 
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">DevFlow</CardTitle>
+            <CardTitle className="text-xl font-semibold">Metaverse</CardTitle>
             <CardDescription className="text-sm leading-relaxed mt-2 text-muted-foreground">
-              A modern full-stack productivity platform built with Next.js, TypeScript, PostgreSQL, and Prisma, focusing on clean architecture, authentication, and scalable backend design.
+              A 2D multiplayer virtual workspace for remote teams. Built with Next.js, Phaser 3, WebSockets, and WebRTC.
             </CardDescription>
           </CardHeader>
 
           <CardContent className="flex-grow flex flex-col gap-5">
             <div className="flex flex-wrap gap-2">
-              <Badge className="bg-muted text-xs" variant="secondary">Next.js</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">TypeScript</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">PostgreSQL</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">WebRTC</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Phaser JS</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">WebSockets</Badge>
               <Badge className="bg-muted text-xs" variant="secondary">Prisma</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Bun</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Zustand</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Turborepo</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">TypeScript</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">MongoDB</Badge>
             </div>
 
             <div className="space-y-2 mt-auto">
               <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
               <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
-                <li>Authentication</li>
-                <li>Database integration</li>
-                <li>Full-stack architecture</li>
+                <li>Real-time communication</li>
+                <li>Multiplayer architecture</li>
+                <li>Game & networking concepts</li>
               </ul>
             </div>
           </CardContent>
@@ -54,25 +65,36 @@ const Projects = () => {
 
         {/* Multiplayer Engine Card */}
         <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
-          <div className="aspect-video bg-muted/30 relative flex items-center justify-center border-b border-border/50 group-hover:bg-muted/50 transition-colors">
-            <span className="text-muted-foreground text-sm flex items-center gap-2">
-              <PlayCircle className="w-5 h-5 opacity-70" /> Multiplayer_Demo.mp4
-            </span>
+          <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
+            <video
+              className="w-full h-full object-cover"
+              src="/videos/quickboard.webm"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
           </div>
 
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">Multiplayer Engine</CardTitle>
+            <CardTitle className="text-xl font-semibold">Quickboard</CardTitle>
             <CardDescription className="text-sm leading-relaxed mt-2 text-muted-foreground">
-              An experiment in real-time collaboration built using WebSockets, TypeScript, and Phaser, exploring multiplayer synchronization, networking, and interactive experiences.
+              QuickBoard is a lightweight, open-source collaborative drawing tool. Ditch the clutter and instantly sketch UI flows, wireframes, and architecture on an infinite canvas.
             </CardDescription>
           </CardHeader>
 
           <CardContent className="flex-grow flex flex-col gap-5">
             <div className="flex flex-wrap gap-2">
+              <Badge className="bg-muted text-xs" variant="secondary">Turborepo</Badge>
               <Badge className="bg-muted text-xs" variant="secondary">WebSockets</Badge>
               <Badge className="bg-muted text-xs" variant="secondary">TypeScript</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">Phaser</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">roughjs</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Zustand</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Tanstack</Badge>
               <Badge className="bg-muted text-xs" variant="secondary">Canvas</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Prisma</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">MongoDB</Badge>
             </div>
 
             <div className="space-y-2 mt-auto">

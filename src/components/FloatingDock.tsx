@@ -74,19 +74,19 @@ export default function FloatingDock() {
                     </AnimatePresence>
                 </div>
 
-                <Link href="https://github.com" target="_blank">
+                <Link href="https://github.com/im1-omkar/" target="_blank">
                     <motion.div variants={iconVariants} initial="initial" whileHover="hover">
                         <FaGithub size={20} />
                     </motion.div>
                 </Link>
 
-                <Link href="https://linkedin.com" target="_blank">
+                <Link href="https://www.linkedin.com/in/omkar-kavhale-8a93b8312/" target="_blank">
                     <motion.div variants={iconVariants} initial="initial" whileHover="hover">
                         <FaLinkedin size={20} />
                     </motion.div>
                 </Link>
 
-                <Link href="https://twitter.com" target="_blank">
+                <Link href="https://x.com/0mkar_x" target="_blank">
                     <motion.div variants={iconVariants} initial="initial" whileHover="hover">
                         <FaXTwitter size={20} />
                     </motion.div>

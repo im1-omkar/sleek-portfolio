@@ -47,7 +47,7 @@ const Projects = () => {
             <div className="space-y-2 mt-auto">
               <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
               <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
-                <li>Real-time communication</li>
+                <li>Audio-Video Calling</li>
                 <li>Multiplayer architecture</li>
                 <li>Game & networking concepts</li>
               </ul>
@@ -100,9 +100,9 @@ const Projects = () => {
             <div className="space-y-2 mt-auto">
               <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
               <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
+                <li>Without External Library</li>
                 <li>Real-time communication</li>
-                <li>Multiplayer architecture</li>
-                <li>Game & networking concepts</li>
+                <li>Syncs progress</li>
               </ul>
             </div>
           </CardContent>

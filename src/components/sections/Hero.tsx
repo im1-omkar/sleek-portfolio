@@ -70,7 +70,7 @@ const Hero = () => {
 
           History, psychology, geopolitics, theoretical physics, AI and few good books.
           <br/>
-          Trying to build a things & explanations that lasts.
+          Trying to build things & explanations that lasts.
           <br/>
           If you're creating something meaningful, I'm listening.
 

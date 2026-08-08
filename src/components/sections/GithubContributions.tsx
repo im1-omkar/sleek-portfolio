@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { GitHubCalendar } from 'react-github-calendar';
+import GitHubCalendar from 'react-github-calendar';
 
 export default function GithubContributions() {
     const [mounted, setMounted] = useState(false);
-    const scrollRef = useRef(null);
+
+    // Fix: Add <HTMLDivElement> to type the ref correctly
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setMounted(true);

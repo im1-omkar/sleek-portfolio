@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import {GitHubCalendar} from 'react-github-calendar';
 
 export default function GithubContributions() {
     const [mounted, setMounted] = useState(false);

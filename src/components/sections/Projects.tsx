@@ -65,7 +65,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">
+                <a href="https://metaverse-web-chi.vercel.app/" target="_blank" rel="noreferrer">
                   <Globe className="w-4 h-4 mr-2" />
                   Website
                 </a>
@@ -78,7 +78,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://github.com/your/repo" target="_blank" rel="noreferrer">
+                <a href="https://github.com/im1-omkar/metaverse" target="_blank" rel="noreferrer">
                   <FaGithub className="w-4 h-4 mr-2" />
                   Source
                 </a>
@@ -142,7 +142,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">
+                <a href="https://quickboard-web-nu.vercel.app/" target="_blank" rel="noreferrer">
                   <Globe className="w-4 h-4 mr-2" />
                   Website
                 </a>
@@ -155,7 +155,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://github.com/your/repo" target="_blank" rel="noreferrer">
+                <a href="https://github.com/im1-omkar/quickboard" target="_blank" rel="noreferrer">
                   <FaGithub className="w-4 h-4 mr-2" />
                   Source
                 </a>
@@ -209,18 +209,6 @@ const Projects = () => {
 
           <CardFooter className="pt-4 border-t border-border/50 bg-muted/10">
             <div className="flex items-center gap-2">
-              {/* Website */}
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="h-8 rounded-md border-border/70"
-              >
-                <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Website
-                </a>
-              </Button>
 
               {/* Source */}
               <Button
@@ -229,7 +217,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://github.com/your/repo" target="_blank" rel="noreferrer">
+                <a href="https://github.com/im1-omkar/memeEditor" target="_blank" rel="noreferrer">
                   <FaGithub className="w-4 h-4 mr-2" />
                   Source
                 </a>
@@ -256,28 +244,27 @@ const Projects = () => {
           <CardHeader className="pb-4">
             <CardTitle className="text-xl font-semibold">Focus-Layer</CardTitle>
             <CardDescription className="text-sm leading-relaxed mt-2 text-muted-foreground">
-              QuickBoard is a lightweight, open-source collaborative drawing tool. Ditch the clutter and instantly sketch UI flows, wireframes, and architecture on an infinite canvas.
+              Treat concentration as a muscle with daily self-evaluations, GitHub-style heatmaps, and habit stacking.
             </CardDescription>
           </CardHeader>
 
           <CardContent className="flex-grow flex flex-col gap-5">
             <div className="flex flex-wrap gap-2">
-              <Badge className="bg-muted text-xs" variant="secondary">Turborepo</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">WebSockets</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">TypeScript</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">roughjs</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">Zustand</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">React</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Vite</Badge>
               <Badge className="bg-muted text-xs" variant="secondary">Tanstack</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">Canvas</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">Prisma</Badge>
-              <Badge className="bg-muted text-xs" variant="secondary">MongoDB</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Lucide-react</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">PostgreSQL</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Express</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Axios</Badge>
+
             </div>
 
             <div className="space-y-2 mt-auto">
               <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
               <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
-                <li>Without External Library</li>
-                <li>Real-time communication</li>
+                <li>Github-Style Heatmap</li>
+                <li>Auto Synchronous</li>
                 <li>Syncs progress</li>
               </ul>
             </div>
@@ -285,18 +272,6 @@ const Projects = () => {
 
           <CardFooter className="pt-4 border-t border-border/50 bg-muted/10">
             <div className="flex items-center gap-2">
-              {/* Website */}
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="h-8 rounded-md border-border/70"
-              >
-                <a href="https://yourwebsite.com" target="_blank" rel="noreferrer">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Website
-                </a>
-              </Button>
 
               {/* Source */}
               <Button
@@ -305,7 +280,7 @@ const Projects = () => {
                 size="sm"
                 className="h-8 rounded-md border-border/70"
               >
-                <a href="https://github.com/your/repo" target="_blank" rel="noreferrer">
+                <a href="https://github.com/im1-omkar/focus-layer" target="_blank" rel="noreferrer">
                   <FaGithub className="w-4 h-4 mr-2" />
                   Source
                 </a>

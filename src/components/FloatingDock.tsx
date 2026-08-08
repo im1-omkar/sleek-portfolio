@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 // Standard UI icons from Lucide
-import { Home, FileDown, Moon } from "lucide-react";
+import { Home, FileDown, Moon, Mail } from "lucide-react";
 // Brand icons from React Icons
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
@@ -38,7 +38,7 @@ export default function FloatingDock() {
 
                 {/* Navigation */}
                 <Link href="/">
-                    <motion.div variants={iconVariants} initial="initial" whileHover="hover">
+                    <motion.div  initial="initial" whileHover="hover">
                         <Home size={20} strokeWidth={2} />
                     </motion.div>
                 </Link>
@@ -52,11 +52,11 @@ export default function FloatingDock() {
                     onMouseEnter={() => setShowResumeLabel(true)}
                     onMouseLeave={() => setShowResumeLabel(false)}
                 >
-                    <Link href="/resume.pdf" target="_blank">
+                    {/* <Link href="/resume.pdf" target="_blank">
                         <motion.div variants={iconVariants} initial="initial" whileHover="hover">
                             <FileDown size={20} strokeWidth={2} />
                         </motion.div>
-                    </Link>
+                    </Link> */}
 
                     <AnimatePresence>
                         {showResumeLabel && (
@@ -75,32 +75,34 @@ export default function FloatingDock() {
                 </div>
 
                 <Link href="https://github.com/im1-omkar/" target="_blank">
-                    <motion.div variants={iconVariants} initial="initial" whileHover="hover">
+                    <motion.div  initial="initial" whileHover="hover">
                         <FaGithub size={20} />
                     </motion.div>
                 </Link>
 
                 <Link href="https://www.linkedin.com/in/omkar-kavhale-8a93b8312/" target="_blank">
-                    <motion.div variants={iconVariants} initial="initial" whileHover="hover">
+                    <motion.div  initial="initial" whileHover="hover">
                         <FaLinkedin size={20} />
                     </motion.div>
                 </Link>
 
                 <Link href="https://x.com/0mkar_x" target="_blank">
-                    <motion.div variants={iconVariants} initial="initial" whileHover="hover">
+                    <motion.div  initial="initial" whileHover="hover">
                         <FaXTwitter size={20} />
+                    </motion.div>
+                </Link>
+
+                {/* Email Icon */}
+                <Link href="mailto:your.email@example.com">
+                    <motion.div  initial="initial" whileHover="hover">
+                        <Mail size={20} strokeWidth={2} />
                     </motion.div>
                 </Link>
 
                 {/* Divider */}
                 <div className="w-[1px] h-6 bg-zinc-700/50 mx-1" />
 
-                {/* Theme Toggle */}
-                <button onClick={() => console.log("Toggle Theme")}>
-                    <motion.div variants={iconVariants} initial="initial" whileHover="hover">
-                        <Moon size={20} strokeWidth={2} />
-                    </motion.div>
-                </button>
+
 
             </motion.div>
         </div>

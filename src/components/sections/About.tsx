@@ -18,7 +18,14 @@ const skills = [
 ];
 
 const learningSkills =  [
-  "Applied AI"
+  "RAG",
+  "RLM",
+  "Fine tuning",
+  "Harness",
+  "Memory",
+  "LangGraph",
+  "LLM Observability",
+  "Computer Use Agents"
 ]
 
 const About = () => {

@@ -17,9 +17,16 @@ export default function Contact() {
 
                 {/* Description text */}
                 <p className="text-[#a1a1aa] text-lg md:text-xl leading-relaxed max-w-xl">
-                    Want to chat? Just shoot me a dm{' '}
+                    Want to chat? Just shoot me an email at{' '}
+                    <a
+                        href="mailto:your.omkarkavhale44@gmail.com"
+                        className="text-blue-500 hover:text-gray-300 hover:underline transition-colors"
+                    >
+                        omkarkavhale44@gmail.com
+                    </a>
+                    , or shoot me a dm{' '}
                     <Link
-                        href="https://twitter.com/your_twitter_handle"
+                        href="https://twitter.com/0mkar_x"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:text-blue-400 hover:underline transition-colors"

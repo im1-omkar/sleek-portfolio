@@ -189,33 +189,40 @@
 
 .route-atmosphere--stars::before {
   background-image:
-    radial-gradient(circle at 12% 19%, rgb(226 232 240 / 72%) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 28% 68%, rgb(226 232 240 / 58%) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 47% 31%, rgb(226 232 240 / 64%) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 66% 77%, rgb(226 232 240 / 56%) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 84% 24%, rgb(226 232 240 / 62%) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 91% 58%, rgb(226 232 240 / 52%) 0 1px, transparent 1.8px);
-  opacity: 0.22;
+    radial-gradient(circle at 8% 38%, rgb(255 255 255 / 96%) 0 1.3px, rgb(165 180 252 / 48%) 2px, transparent 4px),
+    radial-gradient(circle at 12% 19%, rgb(255 255 255 / 88%) 0 1.2px, rgb(165 180 252 / 36%) 2px, transparent 3.5px),
+    radial-gradient(circle at 28% 68%, rgb(255 255 255 / 82%) 0 1.2px, rgb(165 180 252 / 32%) 2px, transparent 3.5px),
+    radial-gradient(circle at 34% 43%, rgb(255 255 255 / 90%) 0 1.3px, rgb(165 180 252 / 40%) 2px, transparent 4px),
+    radial-gradient(circle at 47% 31%, rgb(255 255 255 / 88%) 0 1.2px, rgb(165 180 252 / 34%) 2px, transparent 3.5px),
+    radial-gradient(circle at 55% 83%, rgb(255 255 255 / 84%) 0 1.2px, rgb(165 180 252 / 34%) 2px, transparent 3.5px),
+    radial-gradient(circle at 66% 77%, rgb(255 255 255 / 82%) 0 1.2px, rgb(165 180 252 / 32%) 2px, transparent 3.5px),
+    radial-gradient(circle at 73% 52%, rgb(255 255 255 / 92%) 0 1.3px, rgb(165 180 252 / 40%) 2px, transparent 4px),
+    radial-gradient(circle at 84% 24%, rgb(255 255 255 / 86%) 0 1.2px, rgb(165 180 252 / 36%) 2px, transparent 3.5px),
+    radial-gradient(circle at 91% 58%, rgb(255 255 255 / 80%) 0 1.2px, rgb(165 180 252 / 30%) 2px, transparent 3.5px);
+  opacity: 0.62;
+  filter: drop-shadow(0 0 4px rgb(165 180 252 / 48%));
   animation: stars-twinkle 7s ease-in-out infinite alternate;
 }
 
 .route-atmosphere--stars::after {
   background-image:
-    radial-gradient(circle at 19% 83%, rgb(199 210 254 / 62%) 0 1px, transparent 2px),
-    radial-gradient(circle at 39% 13%, rgb(199 210 254 / 50%) 0 1px, transparent 2px),
-    radial-gradient(circle at 72% 39%, rgb(199 210 254 / 58%) 0 1px, transparent 2px),
-    radial-gradient(circle at 77% 89%, rgb(199 210 254 / 48%) 0 1px, transparent 2px);
-  opacity: 0.2;
+    radial-gradient(circle at 19% 83%, rgb(224 231 255 / 88%) 0 1.2px, rgb(129 140 248 / 38%) 2px, transparent 4px),
+    radial-gradient(circle at 39% 13%, rgb(224 231 255 / 78%) 0 1.2px, rgb(129 140 248 / 32%) 2px, transparent 3.5px),
+    radial-gradient(circle at 72% 39%, rgb(224 231 255 / 88%) 0 1.2px, rgb(129 140 248 / 38%) 2px, transparent 4px),
+    radial-gradient(circle at 77% 89%, rgb(224 231 255 / 78%) 0 1.2px, rgb(129 140 248 / 30%) 2px, transparent 3.5px),
+    radial-gradient(circle at 96% 12%, rgb(224 231 255 / 88%) 0 1.2px, rgb(129 140 248 / 38%) 2px, transparent 4px);
+  opacity: 0.55;
+  filter: drop-shadow(0 0 4px rgb(129 140 248 / 42%));
   animation: stars-twinkle 9s ease-in-out -4s infinite alternate-reverse;
 }
 
 @keyframes stars-twinkle {
   from {
-    opacity: 0.16;
+    opacity: 0.42;
     transform: translateY(0);
   }
   to {
-    opacity: 0.38;
+    opacity: 0.82;
     transform: translateY(-3px);
   }
 }

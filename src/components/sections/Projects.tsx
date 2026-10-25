@@ -17,7 +17,7 @@ const Projects = () => {
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
-              src="/videos/metaverse1.webm"
+              src="/videos/metaverse1.mp4"
               autoPlay
               loop
               muted

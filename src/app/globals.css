@@ -128,3 +128,129 @@
     @apply font-sans;
   }
 }
+
+.nav-route-progress {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.25rem;
+  left: 1rem;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 8%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.nav-route-progress.is-pending {
+  opacity: 1;
+  transition-delay: 100ms;
+}
+
+.nav-route-progress::before {
+  display: block;
+  width: 40%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #a5b4fc, transparent);
+  content: "";
+  transform: translateX(-140%);
+}
+
+.nav-route-progress.is-pending::before {
+  animation: nav-route-loading 1s ease-in-out infinite;
+}
+
+@keyframes nav-route-loading {
+  to {
+    transform: translateX(350%);
+  }
+}
+
+.route-atmosphere {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.route-atmosphere--stars {
+  z-index: 0;
+}
+
+.route-atmosphere--stars::before,
+.route-atmosphere--stars::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.route-atmosphere--stars::before {
+  background-image:
+    radial-gradient(circle at 12% 19%, rgb(226 232 240 / 72%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 28% 68%, rgb(226 232 240 / 58%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 47% 31%, rgb(226 232 240 / 64%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 66% 77%, rgb(226 232 240 / 56%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 84% 24%, rgb(226 232 240 / 62%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 91% 58%, rgb(226 232 240 / 52%) 0 1px, transparent 1.8px);
+  opacity: 0.22;
+  animation: stars-twinkle 7s ease-in-out infinite alternate;
+}
+
+.route-atmosphere--stars::after {
+  background-image:
+    radial-gradient(circle at 19% 83%, rgb(199 210 254 / 62%) 0 1px, transparent 2px),
+    radial-gradient(circle at 39% 13%, rgb(199 210 254 / 50%) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 39%, rgb(199 210 254 / 58%) 0 1px, transparent 2px),
+    radial-gradient(circle at 77% 89%, rgb(199 210 254 / 48%) 0 1px, transparent 2px);
+  opacity: 0.2;
+  animation: stars-twinkle 9s ease-in-out -4s infinite alternate-reverse;
+}
+
+@keyframes stars-twinkle {
+  from {
+    opacity: 0.16;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.38;
+    transform: translateY(-3px);
+  }
+}
+
+.route-atmosphere--rain {
+  z-index: 20;
+}
+
+.route-atmosphere--rain::before {
+  position: absolute;
+  inset: -20%;
+  background-image:
+    repeating-linear-gradient(106deg, transparent 0 58px, rgb(191 219 254 / 18%) 59px, transparent 60px 136px),
+    repeating-linear-gradient(106deg, transparent 0 112px, rgb(203 213 225 / 13%) 113px, transparent 114px 244px);
+  background-size: 160px 190px, 280px 260px;
+  content: "";
+  opacity: 0.18;
+  animation: route-rain-fall 3.2s linear infinite;
+}
+
+@keyframes route-rain-fall {
+  to {
+    transform: translate3d(12px, 100px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-route-progress.is-pending::before,
+  .route-atmosphere--stars::before,
+  .route-atmosphere--stars::after,
+  .route-atmosphere--rain::before {
+    animation: none;
+  }
+
+  .nav-route-progress.is-pending::before {
+    transform: translateX(80%);
+  }
+}

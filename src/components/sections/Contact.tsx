@@ -1,42 +1,51 @@
-import Link from 'next/link';
+import { ArrowUpRight, Mail } from "lucide-react";
 
 export default function Contact() {
-    return (
-        <section className="w-full bg-[#0a0a0a] py-24 px-6 font-sans flex flex-col items-center justify-center">
-            <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
+  return (
+    <section id="contact" className="w-full py-12 sm:py-16">
+      <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-950 to-indigo-950/60 px-6 py-12 shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:px-12 sm:py-16">
+        <div
+          aria-hidden="true"
+          className="absolute -right-24 -top-28 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-36 -left-20 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"
+        />
 
-                {/* Contact Badge */}
-                <div className="bg-white text-black px-3 py-1 rounded-md text-sm font-medium mb-6">
-                    Contact
-                </div>
+        <div className="relative mx-auto flex max-w-2xl flex-col items-center text-center">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-indigo-300">
+            Get in touch
+          </p>
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            Have something in mind?
+          </h2>
+          <p className="mt-5 max-w-xl text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">
+            For a project, a thoughtful question, or a conversation about an
+            idea, I&apos;d be glad to hear from you.
+          </p>
 
-                {/* Heading */}
-                <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight mb-6">
-                    Get in Touch
-                </h2>
-
-                {/* Description text */}
-                <p className="text-[#a1a1aa] text-lg md:text-xl leading-relaxed max-w-xl">
-                    Want to chat? Just shoot me an email at{' '}
-                    <a
-                        href="mailto:your.omkarkavhale44@gmail.com"
-                        className="text-blue-500 hover:text-gray-300 hover:underline transition-colors"
-                    >
-                        omkarkavhale44@gmail.com
-                    </a>
-                    , or shoot me a dm{' '}
-                    <Link
-                        href="https://twitter.com/0mkar_x"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:text-blue-400 hover:underline transition-colors"
-                    >
-                        with a direct question on twitter
-                    </Link>{' '}
-                    and I'll respond whenever I can.
-                </p>
-
-            </div>
-        </section>
-    );
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="mailto:omkarkavhale44@gmail.com"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-indigo-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:w-auto"
+            >
+              <Mail className="h-4 w-4" aria-hidden="true" />
+              Email me
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="https://x.com/0mkar_x"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:w-auto"
+            >
+              Message on X
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

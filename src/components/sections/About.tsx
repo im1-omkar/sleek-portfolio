@@ -66,7 +66,7 @@ function SkillBadges({ items }: { items: SkillItem[] }) {
           key={name}
           className="inline-flex h-9 cursor-default gap-2 rounded-full border border-zinc-700 bg-zinc-900 px-3 py-1 text-sm font-medium text-zinc-100 transition-colors hover:bg-zinc-800 [&>svg]:size-4!"
         >
-          <Icon aria-hidden="true" className="shrink-0 text-zinc-300" />
+          <Icon aria-hidden={true} className="shrink-0 text-zinc-300" />
           <span>{name}</span>
         </Badge>
       ))}

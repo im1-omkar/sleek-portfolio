@@ -1,19 +1,21 @@
 import {
   Activity,
   BrainCircuit,
-  DatabaseSearch,
   Gamepad2,
-  MemoryStick,
+  Globe,
   MonitorCog,
+  Network,
   RadioTower,
-  SlidersHorizontal,
+  ShieldCheck,
   Store,
+  Terminal,
   Workflow,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { ElementType } from "react";
 import {
   SiExpress,
+  SiDocker,
   SiLanggraph,
   SiMongodb,
   SiNextdotjs,
@@ -32,6 +34,8 @@ type SkillItem = {
 };
 
 const skills: SkillItem[] = [
+  { name: "Docker", Icon: SiDocker },
+  { name: "web scraping", Icon: Globe },
   { name: "Turborepo", Icon: SiTurborepo },
   { name: "Next.js", Icon: SiNextdotjs },
   { name: "TypeScript", Icon: SiTypescript },
@@ -48,12 +52,12 @@ const skills: SkillItem[] = [
 ];
 
 const learningSkills: SkillItem[] = [
-  { name: "RAG", Icon: DatabaseSearch },
+  { name: "Transformer", Icon: Network },
   { name: "RLM", Icon: BrainCircuit },
-  { name: "Fine tuning", Icon: SlidersHorizontal },
+  { name: "Agent In Terminal", Icon: Terminal },
   { name: "Harness", Icon: Workflow },
-  { name: "Memory", Icon: MemoryStick },
   { name: "LangGraph", Icon: SiLanggraph },
+  { name: "Sandboxing", Icon: ShieldCheck },
   { name: "LLM Observability", Icon: Activity },
   { name: "Computer Use Agents", Icon: MonitorCog },
 ];

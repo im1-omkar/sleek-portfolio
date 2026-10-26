@@ -1,19 +1,67 @@
-import React from 'react';
+"use client";
+
+import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Code2, PlayCircle } from "lucide-react";
 import { Globe, Star } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
+const categories = [
+  { id: "my-picks", label: "My Picks" },
+  { id: "webdevelopment", label: "Web Development" },
+  { id: "applied_ai", label: "Applied AI" },
+] as const;
+
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]["id"]>("my-picks");
+  const visibleProjectIds = new Set(
+    activeCategory === "my-picks"
+      ? ["metaverse", "quickboard"]
+      : activeCategory === "webdevelopment"
+        ? ["metaverse", "quickboard", "meme-editor", "focus-layer"]
+        : [],
+  );
+
   return (
     <section id="projects" className="flex flex-col gap-10">
       <h2 className="text-3xl font-bold tracking-tight text-foreground flex justify-center">Proof of Work :)</h2>
 
+      <nav
+        aria-label="Proof of work categories"
+        className="mx-auto flex max-w-full flex-wrap justify-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1"
+      >
+        {categories.map(({ id, label }) => {
+          const isActive = activeCategory === id;
+
+          return (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={isActive}
+              onClick={() => setActiveCategory(id)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                isActive
+                  ? "bg-white/10 text-foreground shadow-sm"
+                  : "text-muted-foreground hover:bg-white/5 hover:text-foreground"
+              }`}
+            >
+              {id === "my-picks" && <Star aria-hidden="true" className="mr-1.5 inline size-3.5" />}
+              {label}
+            </button>
+          );
+        })}
+      </nav>
+
+      {activeCategory === "applied_ai" && (
+        <p className="-mt-6 rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 py-8 text-center text-sm leading-6 text-muted-foreground" aria-live="polite">
+          Applied AI projects will appear here.
+        </p>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* metaverse card */}
-        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("metaverse") ? "" : "hidden"}`}>
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -90,7 +138,7 @@ const Projects = () => {
         </Card>
 
         {/* quickboard card */}
-        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("quickboard") ? "" : "hidden"}`}>
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -167,7 +215,7 @@ const Projects = () => {
         </Card>
 
         {/*memeEditor card */}
-        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("meme-editor") ? "" : "hidden"}`}>
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -228,7 +276,7 @@ const Projects = () => {
           </CardFooter>
         </Card>
         {/**focusLayer */}
-        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("focus-layer") ? "" : "hidden"}`}>
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"

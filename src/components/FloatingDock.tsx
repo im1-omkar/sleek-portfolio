@@ -93,7 +93,7 @@ export default function FloatingDock() {
                 </Link>
 
                 {/* Email Icon */}
-                <Link href="mailto:your.email@example.com">
+                <Link href="mailto:omkarkavhale44@gmail.com">
                     <motion.div  initial="initial" whileHover="hover">
                         <Mail size={20} strokeWidth={2} />
                     </motion.div>

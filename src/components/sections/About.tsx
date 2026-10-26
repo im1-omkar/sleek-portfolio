@@ -79,14 +79,14 @@ export default function About() {
     <section className="mb-25 flex flex-col items-center bg-[#0a0a0a] py-10">
       <div className="flex w-full max-w-3xl flex-col items-center gap-6 px-4">
         <h2 className="text-center text-3xl font-semibold tracking-tight text-white md:text-4xl">
-          Skills
+          development
         </h2>
         <SkillBadges items={skills} />
       </div>
 
       <div className="mt-12 flex w-full max-w-3xl flex-col items-center gap-6 px-4">
         <h2 className="text-center text-3xl font-semibold tracking-tight text-green-700">
-          Learning...
+          agentic_ai
         </h2>
         <SkillBadges items={learningSkills} />
       </div>

@@ -1,67 +1,80 @@
-"use client";
-
-import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Globe, Star } from "lucide-react";
+import { Globe } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
-const categories = [
-  { id: "my-picks", label: "My Picks" },
-  { id: "webdevelopment", label: "Web Development" },
-  { id: "applied_ai", label: "Applied AI" },
-] as const;
-
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]["id"]>("my-picks");
-  const visibleProjectIds = new Set(
-    activeCategory === "my-picks"
-      ? ["metaverse", "quickboard"]
-      : activeCategory === "webdevelopment"
-        ? ["metaverse", "quickboard", "meme-editor", "focus-layer"]
-        : [],
-  );
-
   return (
     <section id="projects" className="flex flex-col gap-10">
       <h2 className="text-3xl font-bold tracking-tight text-foreground flex justify-center">Proof of Work :)</h2>
 
-      <nav
-        aria-label="Proof of work categories"
-        className="mx-auto flex max-w-full flex-wrap justify-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1"
-      >
-        {categories.map(({ id, label }) => {
-          const isActive = activeCategory === id;
-
-          return (
-            <button
-              key={id}
-              type="button"
-              aria-pressed={isActive}
-              onClick={() => setActiveCategory(id)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                isActive
-                  ? "bg-white/10 text-foreground shadow-sm"
-                  : "text-muted-foreground hover:bg-white/5 hover:text-foreground"
-              }`}
-            >
-              {id === "my-picks" && <Star aria-hidden="true" className="mr-1.5 inline size-3.5" />}
-              {label}
-            </button>
-          );
-        })}
-      </nav>
-
-      {activeCategory === "applied_ai" && (
-        <p className="-mt-6 rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 py-8 text-center text-sm leading-6 text-muted-foreground" aria-live="polite">
-          Applied AI projects will appear here.
-        </p>
-      )}
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* finding leads card */}
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+          <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
+            <video
+              className="w-full h-full object-cover"
+              src="/videos/finding-leads.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
+          </div>
+
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">Finding Leads</CardTitle>
+            <CardDescription className="text-sm leading-relaxed mt-2 text-muted-foreground">
+              AI-powered lead discovery platform that finds ideal customers across the web, built with LangGraph, Browserbase, Next.js, SSE, WebSockets, Redis, and Docker.
+            </CardDescription>
+          </CardHeader>
+
+          <CardContent className="flex-grow flex flex-col gap-5">
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-muted text-xs" variant="secondary">Docker</Badge>     
+              <Badge className="bg-muted text-xs" variant="secondary">Redis</Badge>   
+              <Badge className="bg-muted text-xs" variant="secondary">BullMQ</Badge>              
+              <Badge className="bg-muted text-xs" variant="secondary">Next.js</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">LangGraph</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">WebScraping</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">SSE</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">TypeScript</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">PostgreSQL</Badge>
+
+            </div>
+
+            <div className="space-y-2 mt-auto">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
+              <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
+                <li>Discover high-intent prospects across the web</li>
+                <li>Let AI agents qualify leads against your ideal customer profile</li>
+                <li>Stay in control with human-in-the-loop approvals</li>
+              </ul>
+            </div>
+          </CardContent>
+
+          <CardFooter className="pt-4 border-t border-border/50 bg-muted/10">
+            <div className="flex items-center gap-2">
+              <Button asChild variant="outline" size="sm" className="h-8 rounded-md border-border/70">
+                <a href="https://finding-leads-seven.vercel.app/" target="_blank" rel="noreferrer">
+                  <Globe className="w-4 h-4 mr-2" />
+                  Website
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="sm" className="h-8 rounded-md border-border/70">
+                <a href="https://github.com/im1-omkar/finding-leads" target="_blank" rel="noreferrer">
+                  <FaGithub className="w-4 h-4 mr-2" />
+                  Source
+                </a>
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+
         {/* metaverse card */}
-        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("metaverse") ? "" : "hidden"}`}>
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -137,8 +150,66 @@ const Projects = () => {
           </CardFooter>
         </Card>
 
+        {/* file harbour card */}
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
+          <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
+            <video
+              className="w-full h-full object-cover"
+              src="/videos/file-harbour.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
+          </div>
+
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">File Harbour</CardTitle>
+            <CardDescription className="text-sm leading-relaxed mt-2 text-muted-foreground">
+              An end-to-end platform for seamless file sharing, organization, and cloud storage across networks.
+            </CardDescription>
+          </CardHeader>
+
+          <CardContent className="flex-grow flex flex-col gap-5">
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-muted text-xs" variant="secondary">Supebase S3</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">P2P File Transfer</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Postgres</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">WS</Badge>
+              <Badge className="bg-muted text-xs" variant="secondary">Cloud Storage</Badge>
+            </div>
+
+            <div className="space-y-2 mt-auto">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Highlights</p>
+              <ul className="text-sm text-foreground/80 list-disc list-inside space-y-1.5">
+                <li>Share files instantly across your network</li>
+                <li>End-to-end transfers with no intermediary servers</li>
+                <li>Organize and securely store files in the cloud</li>
+              </ul>
+            </div>
+          </CardContent>
+
+          <CardFooter className="pt-4 border-t border-border/50 bg-muted/10">
+            <div className="flex items-center gap-2">
+              <Button asChild variant="outline" size="sm" className="h-8 rounded-md border-border/70">
+                <a href="https://file-harbor-pi.vercel.app/" target="_blank" rel="noreferrer">
+                  <Globe className="w-4 h-4 mr-2" />
+                  Website
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="sm" className="h-8 rounded-md border-border/70">
+                <a href="https://github.com/im1-omkar/file-harbor" target="_blank" rel="noreferrer">
+                  <FaGithub className="w-4 h-4 mr-2" />
+                  Source
+                </a>
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+
         {/* quickboard card */}
-        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("quickboard") ? "" : "hidden"}`}>
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -215,7 +286,7 @@ const Projects = () => {
         </Card>
 
         {/*memeEditor card */}
-        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("meme-editor") ? "" : "hidden"}`}>
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -276,7 +347,7 @@ const Projects = () => {
           </CardFooter>
         </Card>
         {/**focusLayer */}
-        <Card className={`flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group ${visibleProjectIds.has("focus-layer") ? "" : "hidden"}`}>
+        <Card className="flex flex-col overflow-hidden bg-background border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/30 group">
           <div className="aspect-video relative overflow-hidden border-b border-border/50 rounded-t-xl">
             <video
               className="w-full h-full object-cover"
@@ -338,6 +409,7 @@ const Projects = () => {
             </div>
           </CardFooter>
         </Card>
+
       </div>
     </section>
   );

@@ -89,7 +89,7 @@ export default function About() {
       </div>
 
       <div className="mt-12 flex w-full max-w-3xl flex-col items-center gap-6 px-4">
-        <h2 className="text-center text-3xl font-semibold tracking-tight text-green-700">
+        <h2 className="text-center text-3xl font-semibold tracking-tight text-white md:text-4xl">
           agentic_ai
         </h2>
         <SkillBadges items={learningSkills} />

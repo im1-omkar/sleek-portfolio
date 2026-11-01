@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" fill="none">
+  <g stroke="#DCE8F5" stroke-linecap="round">
+    <path d="m54 12-7 44" stroke-width=".9" opacity=".22"/>
+    <path d="m132 148-5 31" stroke-width=".65" opacity=".14"/>
+    <path d="m204 36-9 62" stroke-width="1.1" opacity=".19"/>
+    <path d="m286 240-6 42" stroke-width=".75" opacity=".17"/>
+    <path d="m366 86-8 55" stroke-width="1" opacity=".21"/>
+    <path d="m449 331-5 34" stroke-width=".65" opacity=".13"/>
+    <path d="m526 18-8 58" stroke-width="1.05" opacity=".2"/>
+    <path d="m607 181-6 45" stroke-width=".75" opacity=".15"/>
+    <path d="m690 63-9 68" stroke-width="1.1" opacity=".2"/>
+    <path d="m774 276-5 36" stroke-width=".7" opacity=".16"/>
+    <path d="m854 108-7 53" stroke-width=".95" opacity=".18"/>
+    <path d="m936 382-6 40" stroke-width=".7" opacity=".14"/>
+    <path d="m1013 32-9 65" stroke-width="1.1" opacity=".2"/>
+    <path d="m1098 217-6 43" stroke-width=".75" opacity=".15"/>
+    <path d="m1163 83-7 51" stroke-width=".9" opacity=".18"/>
+    <path d="m91 507-8 57" stroke-width="1" opacity=".18"/>
+    <path d="m176 691-5 34" stroke-width=".65" opacity=".13"/>
+    <path d="m256 462-7 49" stroke-width=".8" opacity=".17"/>
+    <path d="m337 798-9 66" stroke-width="1.1" opacity=".2"/>
+    <path d="m421 573-5 37" stroke-width=".7" opacity=".14"/>
+    <path d="m501 911-6 45" stroke-width=".8" opacity=".17"/>
+    <path d="m581 474-8 58" stroke-width="1" opacity=".18"/>
+    <path d="m666 733-5 35" stroke-width=".65" opacity=".13"/>
+    <path d="m745 536-9 68" stroke-width="1.1" opacity=".19"/>
+    <path d="m831 872-6 43" stroke-width=".75" opacity=".16"/>
+    <path d="m910 491-7 50" stroke-width=".9" opacity=".18"/>
+    <path d="m991 738-5 34" stroke-width=".65" opacity=".13"/>
+    <path d="m1072 555-9 63" stroke-width="1.05" opacity=".2"/>
+    <path d="m1147 890-6 45" stroke-width=".75" opacity=".15"/>
+    <path d="m23 841-5 32" stroke-width=".65" opacity=".12"/>
+    <path d="m1166 438-5 35" stroke-width=".7" opacity=".14"/>
+    <path d="m632 926-5 33" stroke-width=".7" opacity=".14"/>
+  </g>
+  <g stroke="#AFC3DE" stroke-linecap="round" opacity=".12">
+    <path d="m147 402-4 27" stroke-width="2"/>
+    <path d="m476 167-5 31" stroke-width="1.8"/>
+    <path d="m724 168-4 24" stroke-width="2"/>
+    <path d="m1041 333-5 30" stroke-width="1.8"/>
+    <path d="m311 637-4 25" stroke-width="2"/>
+    <path d="m890 665-5 32" stroke-width="1.8"/>
+  </g>
+</svg>

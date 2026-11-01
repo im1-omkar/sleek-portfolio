@@ -16,6 +16,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/finding-leads.mp4"
+              poster="/finding-leads.png"
               autoPlay
               loop
               muted
@@ -79,6 +80,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/metaverse1.mp4"
+              poster="/metaverse.png"
               autoPlay
               loop
               muted
@@ -156,6 +158,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/file-harbour.mp4"
+              poster="/file-harbour.png"
               autoPlay
               loop
               muted
@@ -214,6 +217,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/quickboard.webm"
+              poster="/quickboard.png"
               autoPlay
               loop
               muted
@@ -291,6 +295,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/memeEditor.webm"
+              poster="/meme-editor.png"
               autoPlay
               loop
               muted
@@ -352,6 +357,7 @@ const Projects = () => {
             <video
               className="w-full h-full object-cover"
               src="/videos/focusLayer.webm"
+              poster="/focus-layer.png"
               autoPlay
               loop
               muted

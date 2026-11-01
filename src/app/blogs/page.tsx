@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import RouteAtmosphere from "@/components/RouteAtmosphere";
@@ -54,33 +55,49 @@ export default function Blogs() {
 
           <div className="mt-6" aria-live="polite">
             {activeCategory === "tech" ? (
-              <Link
-                href="/#essay"
-                className="block rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/20 hover:bg-white/[0.06]"
-              >
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-10 text-center">
                 <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                  Essay
+                  Tech
                 </p>
-                <h2 className="text-xl font-semibold tracking-tight text-foreground">
-                  Understanding the Universe
+                <h2 className="text-lg font-medium tracking-tight text-foreground">
+                  Coming soon…
                 </h2>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                  A reflection on consciousness, science, and what it means to
-                  study the universe from within it.
-                </p>
-                <span className="mt-5 inline-block text-sm font-medium text-indigo-300">
-                  Read essay <span aria-hidden="true">→</span>
-                </span>
-              </Link>
-            ) : (
-              <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 py-10 text-center">
-                <h2 className="text-base font-semibold text-foreground">
-                  Book reviews are coming soon
-                </h2>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Notes on books worth reading will show up here.
-                </p>
               </div>
+            ) : (
+              <Link
+                href="/blogs/fabric-of-reality"
+                className="group grid grid-cols-[120px_1fr] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-indigo-300/30 hover:bg-white/[0.06] sm:grid-cols-[170px_1fr]"
+              >
+                <div className="relative my-4 ml-4 aspect-[13/20] w-[88px] self-center overflow-hidden rounded-sm bg-slate-950 shadow-lg shadow-black/30 sm:my-5 sm:ml-5 sm:w-[130px]">
+                  <Image
+                    src="https://cdn.penguin.co.uk/dam-assets/books/9780140146905/9780140146905-jacket-large.jpg"
+                    alt="The Fabric of Reality by David Deutsch, Penguin Books cover"
+                    width={650}
+                    height={1000}
+                    sizes="(max-width: 640px) 88px, 130px"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-5 sm:p-6">
+                  <p className="mb-3 text-xs uppercase tracking-[0.16em] text-indigo-300/80">
+                    Book review
+                  </p>
+                  <h2 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                    The Fabric of Reality: A Journey Towards Understanding Everything
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                    A personal reflection on David Deutsch’s ideas about quantum
+                    mechanics, evolution, knowledge, computation, and how they
+                    connect.
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-indigo-300">
+                    Read review
+                    <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
+                  </span>
+                </div>
+              </Link>
             )}
           </div>
         </section>

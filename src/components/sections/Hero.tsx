@@ -327,17 +327,26 @@ const Hero = () => {
         </h1>
 
         {/* Minimalist Tagline */}
-        <p className="text-muted-foreground text-base sm:text-lg">
-          21,
-
-          CS@IIITN. I build and break things. First principles, optimism and my curiosity.
-
-          I Read Philosophy, History, geopolitics, theoretical physics, AI and other unknowns.
+        <p className="text-muted-foreground text-base leading-7 sm:text-lg">
+          21, CS@IIITN. I build and break things. First principles, optimism and
+          my curiosity.
           <br />
-          Trying to build things & explanations that last.
-          <br />
-
+          I Read Philosophy, History, geopolitics, theoretical physics, AI and
+          other unknowns.
         </p>
+        <div className="flex items-center justify-center gap-2.5 text-indigo-200 sm:gap-3">
+          <span
+            aria-hidden="true"
+            className="h-px w-5 shrink-0 bg-gradient-to-r from-transparent to-indigo-300/80 sm:w-10"
+          />
+          <p className="text-sm font-medium tracking-wide sm:text-base">
+            Building things and explanations that endure.
+          </p>
+          <span
+            aria-hidden="true"
+            className="h-px w-5 shrink-0 bg-gradient-to-l from-transparent to-indigo-300/80 sm:w-10"
+          />
+        </div>
 
       </div>
 
